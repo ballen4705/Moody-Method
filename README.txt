@@ -10,6 +10,10 @@ around 1950, and then was published in more detail in a paper by
 Moody, ``How to calibrate surface plates in the plant'', which was
 published in "The Tool Engineer" in October 1955.
 
+Moody's paper contains a number of typographical errors and omissions.
+These are documented in a short paper which is included here, called
+MoodyCorrections.pdf
+
 To use this code follow steps a-e below.
 
 (a) Compile the code if it has not already been done, with:
