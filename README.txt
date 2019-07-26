@@ -33,7 +33,10 @@ Put one data value per line, with no blank or empty lines. For example
 as comments and ignored.
 
 A set of files containing Moody's original data from his paper may be
-found in the directory Moody_data/.
+found in the directory Moody_data/.  If you are using this for your
+own data, I suggest that you create another directory and put your eight
+data files and your Config.txt file there.  Then run "moody" from within
+that directory.
 
 
 (c) Edit the configuration file Config.txt.  It has one line with
