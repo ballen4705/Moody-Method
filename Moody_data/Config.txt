@@ -1,0 +1,19 @@
+# This is a configuration file.
+# Any lines starting with "#" are ignored.
+#
+# To specify a foot spacing in mm, use
+# M in the first column followed by
+# a space and the spacing in mm.
+# For example 66mm foot spacing would be:
+# M 66.0
+#
+# To specify a foot spacing in inches, use
+# I in the first column followed by
+# a space and the spacing in inches.
+# Moody used a 4-inch foot spacing.
+#
+# Note: if multiple foot spacings are given,
+# on different lines, only the FIRST one is
+# used, and the remainder are ignored!
+#
+I 4.0 
