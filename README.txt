@@ -16,8 +16,10 @@ MoodyCorrections.pdf
 
 To use this code follow steps a-e below.
 
+
 (a) Compile the code if it has not already been done, with:
     cc -o moody moody.c -lm
+
 
 (b) Enter the measured angular deviations in arc-seconds into the
 eight text files:
@@ -30,11 +32,17 @@ Put one data value per line, with no blank or empty lines. For example
 "-12.3" means -12.3 arcseconds. Lines beginning with "#" are treated
 as comments and ignored.
 
+A set of files containing Moody's original data from his paper may be
+found in the directory Moody_data/.
+
+
 (c) Edit the configuration file Config.txt.  It has one line with
 either "I" or "M" as the first character (to indicate inch or metric
 units) followed by a blank space and then the foot spacing in inches
-or mm respectively.  Lines beginning with "#" are treated
-as comments and ignored.
+or mm respectively.  Lines beginning with "#" are treated as comments
+and ignored. The Config.txt file included by default is set up to
+agree with Moody's paper (a 4-inch foot spacing).
+
 
 (d) Run the program.  On a Linux system or on a Mac terminal:
 ./moody
@@ -42,6 +50,7 @@ as comments and ignored.
 is sufficient.  The main output (Moody's eight tables) will be printed
 on the terminal.  There is also some commentary printed before these
 tables that may be of interest.
+
 
 (e) Two text files are created, that can be used to plot the output:
 "gnuplot.dat" and "gnuplot.cmd".  If gnuplot is installed on your
@@ -52,7 +61,7 @@ first non-comment line in gnuplot.cmd by adding a "#" character at the
 start of the line.
 
 
-This code and documentation are Copyright Bruce Allen 2018.
+This code and documentation are Copyright Bruce Allen 2018, 2019.
 
 They may be freely distributed under the GNU General Public License
 version 3.  See the file "License.txt" for details.
