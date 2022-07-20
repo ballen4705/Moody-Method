@@ -367,7 +367,7 @@ void first_four_columns(int which_sheet) {
       ws[which_sheet][3][0]=0.0;
       ws[which_sheet][3][1]=0.0;
       for (j=2; j<=ndat; j++) ws[which_sheet][3][j]=
-				 ws[which_sheet][3][j-1]+ws[which_sheet][2][j];
+				 ws[which_sheet][3][j-1]+ws[which_sheet][3][j];
       return;
 }
 
