@@ -64,8 +64,8 @@ first non-comment line in gnuplot.cmd by adding a "#" character at the
 start of the line.
 
 
-This code and documentation are Copyright Bruce Allen 2018, 2019.
+This code and documentation are Copyright Bruce Allen 2018-2024.
 
 They may be freely distributed under the GNU General Public License
-version 3.  See the file "License.txt" for details.
+version 3.  See the file "LICENSE" for details.
 

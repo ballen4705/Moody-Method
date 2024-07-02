@@ -1,6 +1,6 @@
 /*
  * Moody Surface Plate Analysis
- * Copyright Bruce Allen, 2018, 2019
+ * Copyright Bruce Allen, 2018-2024
  * 
  * (1) Implementation of the method documented in "How to calibrate a
  * surface plate in the plant", by J.C. Moody, published in The Tool
@@ -41,7 +41,7 @@
  * <https://www.gnu.org/licenses/>. 
  */
 
-
+#include <ctype.h>
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -101,6 +101,7 @@ float foot_spacing;
 void read_config_file(void) {
    FILE* fp;
    char buf[MAX_LINELEN];
+   char* head;
    int file_line=0;
    const char fname[]="Config.txt";
    char flag;
@@ -120,13 +121,17 @@ void read_config_file(void) {
       /* guarantee newline at the end */
       buf[sizeof(buf)-1]='\n';
       
-      /* if comment, skip line */
-      if (buf[0]=='#') continue;
+      /* move to first non-white-space character */
+      head = buf;
+      while (isspace(*head) && *head!='\n') head++;
+
+      /* if comment or end of line, skip line */
+      if (*head=='\n' || *head=='#') continue;
       
       /* parse foot spacing */
       {
 	 char remaining[MAX_LINELEN];
-	 int ret = sscanf(buf, "%c %f %s\n", &flag, &foot_spacing, remaining);
+	 int ret = sscanf(head, "%c %f %s\n", &flag, &foot_spacing, remaining);
 	    if (ret !=2 || !(flag == 'M' || flag == 'I')) {
 	       fprintf(stderr,
 		       "Error: unable to parse line %d of data file %s.\n"
@@ -166,6 +171,7 @@ void read_config_file(void) {
 void read_data(int which_file) {
    FILE* fp;
    char buf[MAX_LINELEN];
+   char* head;
    const char *fname= filenames[which_file];
    int lines_read=0;
    int file_line=0;
@@ -183,14 +189,18 @@ void read_data(int which_file) {
 
          /* guarantee newline at the end */
 	 buf[sizeof(buf)-1]='\n';
-	 
-	 /* if comment, skip line */
-	 if (buf[0]=='#') continue;
-	 
+
+	 /* move to first non-white-space character */
+	 head = buf;
+	 while (isspace(*head) && *head!='\n') head++;
+
+	 /* if comment or end of line, skip line */
+	 if (*head=='\n' || *head=='#') continue;
+	 	 
 	 /* parse number of arcseconds */
 	 {
 	    char remaining[MAX_LINELEN];
-	    int ret = sscanf(buf, "%f%s\n", &ws[which_file][1][lines_read+1], remaining);
+	    int ret = sscanf(head, "%f%s\n", &ws[which_file][1][lines_read+1], remaining);
 	    if (ret !=1) {
 	       fprintf(stderr,
 		       "Error: unable to parse line %d of data file %s.\n"
@@ -444,7 +454,7 @@ void do_consistency_checks(void) {
 
 void print_license(void) {
    printf("Moody Surface Plate Analysis\n"
-	  "Copyright 2018, Bruce Allen\n"
+	  "Copyright 2018-2024, Bruce Allen\n"
 	  "This program comes with ABSOLUTELY NO WARRANTY.\n"
 	  "This is free software, and you are welcome to redistribute it\n"
 	  "under the conditions of the included GNU General Public License.\n\n"

@@ -1,0 +1,5 @@
+2024-07-02
+  - Removed include for libc.h
+  - Added include for ctype.h
+  - Updated Copyright
+  - Now: blank lines/space ignored in config and data files
