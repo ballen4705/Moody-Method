@@ -1,6 +1,9 @@
 # The following command file can be used with gnuplot to produce
 # a 3-dimensional plot of the surface plate. The associated data
 # file is called "gnuplot.dat" and can be found in this directory.
+#
+# On typical Unix/Linux/Mac systems, invoke gnuplot with:
+# gnuplot -c gnuplot.cmd
 
 set term X11 enhanced
 set xyplane at 0
