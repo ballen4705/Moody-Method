@@ -3,3 +3,5 @@
   - Added include for ctype.h
   - Updated Copyright
   - Now: blank lines/space ignored in config and data files
+  - Created this CHANGELOG.txt file
+  - Improved the README.md, visible on the GitHub page
