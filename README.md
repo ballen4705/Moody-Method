@@ -47,8 +47,8 @@ See below for a description of the output.
       **N_S.txt E_W.txt**    
       Here N=North, S=South, E=East and W=West.  The first four files are perimeters, the next two files are diagonals, and the last two files are center lines.
 
-    - In these text files, put one data value per line. Blank or empty lines are ignored. For
-    example: "-12.3" means -12.3 arcseconds. Lines beginning with "#"
+    - In these text files, put one data value per line. For
+    example: "-12.3" means -12.3 arcseconds. Lines beginning with "#" and blank or empty lines
     are treated as comments and ignored. See **MoodyCorrections.pdf** for
     information about the sign and direction conventions.
 
