@@ -68,7 +68,7 @@ To use this code follow the steps below.
 
     - If **gnuplot** is installed on your computer, the command:  
 **gnuplot gnuplot.cmd**  
- should create the plot. You may have to edit the first
+ should create a surface plot of your plate, like that shown below. You may have to edit the first
       line of **gnuplot.cmd** to set the correct terminal type for your
       computer. If unsure, comment out the first non-comment line in
       **gnuplot.cmd** by adding a "#" character at the start of the line.  
