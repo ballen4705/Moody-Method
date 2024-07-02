@@ -27,13 +27,21 @@ To use this code follow these steps:
 
 2.  To see how the program works, a set of files containing Moody's original data from his paper are in the subdirectory **Moody_data/** .  Go into that directory and then run the **moody** executable
     within that directory. On a Linux system or on a Mac terminal:  
-**../moody**
- 
-3.  To use this program for your own data:
+**../moody**  
+See below for a description of the output.
+ 
+4.  To use this program for your own data:
 
     - Create another subdirectory and move into it. Copy the configuration file **Config.txt**  there.
-    -   Enter the measured angular deviations in arc-seconds into the eight
-    text files:  
+   
+    - The included **Config.txt** file is set up to agree with Moody's paper
+      (a 4-inch foot spacing). Edit the **Config.txt** and put in the correct foot spacing for your measurements. **Config.txt** has one line with either "I"
+      or "M" (to indicate inch or metric units) followed by a blank
+      space and then the foot spacing in inches or mm respectively.
+      White space and lines beginning with "#" are treated as comments
+      and ignored.
+
+    -   Create eight text files containing the measured angular deviations in arc-seconds:  
     **NE_SE.txt SE_SW.txt NE_NW.txt NW_SW.txt**    
       **NW_SE.txt NE_SW.txt**   
       **N_S.txt E_W.txt**    
@@ -43,15 +51,6 @@ To use this code follow these steps:
     example: "-12.3" means -12.3 arcseconds. Lines beginning with "#"
     are treated as comments and ignored. See **MoodyCorrections.pdf** for
     information about the sign and direction conventions.
-
-    - Edit the **Config.txt** and put in the correct foot spacing for your measurements. **Config.txt** has one line with either "I"
-      or "M" (to indicate inch or metric units) followed by a blank
-      space and then the foot spacing in inches or mm respectively.
-      White space and lines beginning with "#" are treated as comments
-      and ignored.
-
-    - The included **Config.txt** file is set up to agree with Moody's paper
-      (a 4-inch foot spacing).
 
     - Run the program. On a Linux system or on a Mac terminal:  
 **../moody**
@@ -65,7 +64,7 @@ To use this code follow these steps:
 
     - If **gnuplot** is installed on your computer, the command:  
 **gnuplot gnuplot.cmd**  
- should create a surface plot of your plate, like the shown below (which is for Moody's example data). You may have to edit the first
+should create a surface plot of your plate, like the shown below (which is for Moody's example data). You may have to edit the first
       line of **gnuplot.cmd** to set the correct terminal type for your
       computer. If unsure, comment out the first non-comment line in
       **gnuplot.cmd** by adding a "#" character at the start of the line.  
