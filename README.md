@@ -34,7 +34,7 @@ To use this code follow the steps below.
 
 4.  In these text files, put one data value per line. Blank or empty lines are ignored. For
     example: "-12.3" means -12.3 arcseconds. Lines beginning with "#"
-    are treated as comments and ignored. See MoodyCorrections.pdf for
+    are treated as comments and ignored. See **MoodyCorrections.pdf** for
     information about the sign and direction conventions. 
 
 5.  A set of files containing Moody's original data from his paper may
