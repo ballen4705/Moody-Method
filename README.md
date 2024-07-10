@@ -63,8 +63,9 @@ See below for a description of the output.
       output: **gnuplot.dat** and **gnuplot.cmd** .
 
     - If **gnuplot** is installed on your computer, the command:  
-**gnuplot gnuplot.cmd**  
-should create a surface plot of your plate, like the shown below (which is for Moody's example data). You may have to edit the first
+      **gnuplot gnuplot.cmd**  
+      should create a surface plot of your plate, like the one shown below
+      (which is for Moody's example data). You may have to edit the first
       line of **gnuplot.cmd** to set the correct terminal type for your
       computer. If unsure, comment out the first non-comment line in
       **gnuplot.cmd** by adding a "#" character at the start of the line.  
