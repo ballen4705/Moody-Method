@@ -5,7 +5,10 @@
 # On typical Unix/Linux/Mac systems, invoke gnuplot with:
 # gnuplot -c gnuplot.cmd
 
-set term X11 enhanced
+set term wxt size 1000,800
+set mouse
+set palette rgbformulae 33,13,10
+set pm3d explicit
 set xyplane at 0
 set label "N" at 8.000000, 11.000000, 0.000000
 set label "S" at 8.000000, -1.000000, 0.000000
@@ -14,5 +17,6 @@ set label "W" at -1.600000, 5.000000, 0.000000
 set zrange [0:18]
 set zlabel "height\nin\ntens of\nmicroinch"
 set key off
-splot [0:16][0:10][0:18] "gnuplot.dat" using 1:2:3 with lines
+splot [0:16][0:10][0:18] "gnuplot.dat" using 1:2:3 with lines palette lw 1.5, \
+    "" using 1:2:3 with points pt 7 ps 1.2 lc rgb "black"
 pause -1
