@@ -70,8 +70,9 @@ See below for a description of the output.
       computer. If unsure, comment out the first non-comment line in
       **gnuplot.cmd** by adding a "#" character at the start of the line.  
 
-
+     - This shows a static view of the plot:
         ![Plot showing deviations in surface plate, produced by moody method/code.](/Moody_data/gnuplot.jpg)
 
+     - With a modern gnuplot installation on your computer, the plot below can be rotated, scrolled and zoomed with a mouse:
         ![Plot showing deviations in surface plate, produced by moody method/code.](/Moody_data/gnuplot.png)
 
