@@ -72,4 +72,6 @@ See below for a description of the output.
 
 
         ![Plot showing deviations in surface plate, produced by moody method/code.](/Moody_data/gnuplot.jpg)
-        
+
+        ![Plot showing deviations in surface plate, produced by moody method/code.](/Moody_data/gnuplot.png)
+
