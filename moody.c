@@ -1,6 +1,6 @@
 /*
  * Moody Surface Plate Analysis
- * Copyright Bruce Allen, 2018-2024
+ * Copyright Bruce Allen, 2018-2026
  * 
  * (1) Implementation of the method documented in "How to calibrate a
  * surface plate in the plant", by J.C. Moody, published in The Tool
