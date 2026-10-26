@@ -497,7 +497,10 @@ void output_gnuplot(float biggest) {
 	   "# On typical Unix/Linux/Mac systems, invoke gnuplot with:\n"
 	   "# gnuplot -c gnuplot.cmd\n"
 	   "\n"
-	   "set term X11 enhanced\n"
+	   "set term wxt size 1000,800\n"
+	   "set mouse\n"
+	   "set palette rgbformulae 33,13,10\n"
+	   "set pm3d explicit\n"
 	   "set xyplane at 0\n"
 	   "set label \"N\" at %f, %f, %f\n"
 	   "set label \"S\" at %f, %f, %f\n"
@@ -506,7 +509,8 @@ void output_gnuplot(float biggest) {
 	   "set zrange [0:%d]\n"
 	   "set zlabel \"%s\"\n"
 	   "set key off\n"
-	   "splot [0:%d][0:%d][0:%d] \"gnuplot.dat\" using 1:2:3 with lines\n"
+	   "splot [0:%d][0:%d][0:%d] \"gnuplot.dat\" using 1:2:3 with lines palette lw 1.5, \\\n"
+	   "    \"\" using 1:2:3 with points pt 7 ps 1.2 lc rgb \"black\"\n"
 	   "pause -1\n",
 	   0.5*max_x,  1.1*max_y, 0.0,
 	   0.5*max_x, -0.1*max_y, 0.0,
